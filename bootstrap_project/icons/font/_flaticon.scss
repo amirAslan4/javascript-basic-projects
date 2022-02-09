@@ -1,0 +1,66 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 08/11/2019 19:49
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-call-answer:before { content: "\f100"; }
+.flaticon-search:before { content: "\f101"; }
+.flaticon-add-filled-cross-sign:before { content: "\f102"; }
+.flaticon-facebook-logo:before { content: "\f103"; }
+.flaticon-twitter:before { content: "\f104"; }
+.flaticon-dribbble-logo:before { content: "\f105"; }
+.flaticon-pinterest-circular-logo-symbol:before { content: "\f106"; }
+.flaticon-linked-in-logo-of-two-letters:before { content: "\f107"; }
+.flaticon-behance:before { content: "\f108"; }
+.flaticon-heart:before { content: "\f109"; }
+.flaticon-icon-1:before { content: "\f10a"; }
+.flaticon-icon-2:before { content: "\f10b"; }
+.flaticon-icon-3:before { content: "\f10c"; }
+    
+    $font-Flaticon-call-answer: "\f100";
+    $font-Flaticon-search: "\f101";
+    $font-Flaticon-add-filled-cross-sign: "\f102";
+    $font-Flaticon-facebook-logo: "\f103";
+    $font-Flaticon-twitter: "\f104";
+    $font-Flaticon-dribbble-logo: "\f105";
+    $font-Flaticon-pinterest-circular-logo-symbol: "\f106";
+    $font-Flaticon-linked-in-logo-of-two-letters: "\f107";
+    $font-Flaticon-behance: "\f108";
+    $font-Flaticon-heart: "\f109";
+    $font-Flaticon-icon-1: "\f10a";
+    $font-Flaticon-icon-2: "\f10b";
+    $font-Flaticon-icon-3: "\f10c";
