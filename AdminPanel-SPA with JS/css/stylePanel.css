@@ -1,0 +1,1320 @@
+@font-face {
+    font-family: IRANSans;
+    src: url("../font/Iranian\ Sans.ttf");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: IRANSans;
+    background-color: #f5f5f5;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header {
+    background-color: #fff;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    box-shadow: 0 0px 11px rgba(0, 0, 0, 0.13);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding-right: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 45px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+nav ul li:nth-child(2) a {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+nav ul li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: pink;
+    border-radius: 50%;
+    transform: translate(-7px, -8px);
+    font-size: 12px;
+    color: #f44336;
+}
+
+nav ul li a i::before {
+    margin-left: 0 !important;
+    text-decoration: none;
+    color: #424242;
+    font-size: 18px !important;
+}
+
+nav .admin-pic {
+    background-image: url("../images/admin2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 44px;
+    height: 44px;
+    border-radius: 25px;
+}
+
+header .nav-btn {
+    position: relative;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    margin-left: auto;
+    display: none;
+}
+
+header .nav-btn span {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: #757575;
+    border-radius: 40px;
+}
+
+header .nav-btn span:first-child {
+    top: 0;
+}
+
+header .nav-btn span:nth-child(2) {
+    top: 50%;
+}
+
+header .nav-btn span:nth-child(3) {
+    top: 100%;
+}
+
+nav ul li:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+
+.container section {
+    display: flex;
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+    background-color: #f5f5f5;
+}
+
+/******* main-content ********/
+
+section .main-content {
+    height: calc(100vh - 55px);
+    width: 79vw;
+    padding: 40px;
+}
+
+.tabcontent {
+    box-shadow: 0 1px 15px 0 rgba(69, 90, 100, 0.08);
+    background-color: #fff;
+    border-radius: 5px;
+    animation: demo 1s;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+@keyframes demo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*.main-content .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-content .row .card {
+    position: relative;
+    flex-basis: 23%;
+    background-color: #f5f6fa;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    background-color: #fff;
+    border-radius: 5px;
+    min-height: 130px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.main-content .row .card .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    border-radius: 0 0 5px 5px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.main-content .row .card:first-of-type .card-footer {
+    background: linear-gradient(to right, #fe5e71, #fe8f9c);
+}
+
+.main-content .row .card:nth-of-type(2) .card-footer {
+    background: linear-gradient(to right, #0ac383, #0df2a2);
+}
+
+.main-content .row .card:nth-of-type(3) .card-footer {
+    background: linear-gradient(to right, #01aaad, #01dade);
+}
+
+.main-content .row .card:nth-of-type(4) .card-footer {
+    background: linear-gradient(to right, #fe9365, #feb596);
+}
+
+.card .card-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card .card-footer .flaticon-round-help-button::before {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card .card-body {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 39px);
+}
+
+.card .card-body .card-title {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+}
+
+.card-body .card-title h6 {
+    color: #919aa3;
+}
+
+.card:first-of-type .card-body .card-title h3 {
+    color: #fe5e71;
+}
+
+.card:nth-of-type(2) .card-body .card-title h3 {
+    color: #0ac383;
+}
+
+.card:nth-of-type(3) .card-body .card-title h3 {
+    color: #01aaad;
+}
+
+.card:nth-of-type(4) .card-body .card-title h3 {
+    color: #fe9365;
+}*/
+
+/*section .main-content .box {
+    width: 100%;
+    margin: auto;
+    min-height: 370px;
+    background-color: #fff;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+    border-radius: 5px;
+}*/
+
+
+
+.tablinks.active {
+    background-color: #dbdbdb !important;
+    /*#fff*/
+    border-right: 5px #d81b60 solid !important;
+    color: #fe5e71 !important;
+}
+
+.content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+/******* sidebar ********/
+
+section aside {
+    width: 20vw;
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 50px);
+    text-align: right;
+    background-color: #fff;
+    /*#e9effd*/
+    /*#cfcfcf*/
+    box-shadow: 0 -1px 20px 0 rgba(69, 90, 100, 0.15);
+    overflow-y: scroll;
+}
+
+aside .sidebar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section aside .collapsible,
+section aside .item4 {
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    color: #757575;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 10px 15px 0;
+}
+
+aside .collapsible span::before {
+    font-size: 16px;
+}
+
+aside .item4 span::before {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+aside .collapsible:not(.item4) span:nth-child(2) {
+    display: inline-block;
+    flex-grow: 1;
+    margin-left: 0 !important;
+}
+
+aside .collapsible span:first-child,
+.item4 span:first-child::before {
+    font-size: 15px;
+    color: #fe5e71;
+}
+
+.content .subMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    /*#dbdbdb*/
+}
+
+.content .subMenu a {
+    display: block;
+    width: 100%;
+    color: #757575;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 10px 6px 0;
+    transition: all 0.3s;
+}
+
+.item4,
+.collapsible {
+    transition: all 0.4s;
+}
+
+aside .collapsible:hover,
+.subMenu a:hover,
+.item4:hover {
+    color: #fe5e71;
+    /*#df5e8d*/
+}
+
+.subMenu .flaticon-chevron::before {
+    font-size: 8px;
+    margin-left: 0;
+    font-weight: 600;
+}
+
+/*********** poem-list page ***********/
+.main-content>.tabcontent form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 25px 16px 30px;
+}
+
+.main-content>.tabcontent form input {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 7px;
+    text-align: right;
+    color: #757575;
+    font-family: IRANSans;
+    font-size: 12px;
+    border: 1px solid #757575;
+}
+
+.main-content>.tabcontent form input:focus {
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.2);
+}
+
+::placeholder {
+    color: #757575;
+    font-size: 12px;
+    font-family: IRANSans;
+}
+
+::-webkit-input-placeholder {
+    color: #757575;
+    font-size: 12px;
+    font-family: IRANSans;
+}
+
+:-ms-input-placeholder {
+    color: #757575;
+    font-size: 12px;
+    font-family: IRANSans;
+}
+
+::-ms-input-placeholder {
+    color: #757575;
+    font-size: 12px;
+    font-family: IRANSans;
+}
+
+.main-content>.tabcontent form span::before {
+    color: #757575;
+    font-size: 21px;
+}
+
+.tabcontent .wrapper {
+    padding: 16px 16px 200px;
+}
+
+.main-content>.tabcontent table {
+    width: 97%;
+    height: 200px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#poemlist th,
+#poemlist td {
+    margin: 4px auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+#poemlist th {
+    padding: 15px 0;
+}
+
+.tabcontent table thead {
+    background-color: #353c4e;
+    font-size: 15px;
+    color: #fff;
+}
+
+table .flaticon-settings-1::before {
+    margin-left: 0 !important;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+table tbody tr td:nth-child(2) span {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+table tbody td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table tbody td:last-child img {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+}
+
+tbody tr td:first-child a {
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    width: 32px;
+    height: 27px;
+    text-decoration: none;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.13);
+}
+
+tbody tr td:first-child a i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 0 !important;
+    font-size: 15px;
+}
+
+tbody tr td:first-child a:first-child {
+    border: 1px solid #212841;
+    color: #000;
+}
+
+tbody tr td:first-child a:first-child:hover {
+    color: #007500ed;
+    border-color: #007500ed;
+}
+
+tbody tr td:first-child a:nth-child(2) {
+    background-color: #d92550;
+    color: #fff;
+}
+
+tbody tr td:first-child a:nth-child(2):hover {
+    background-color: #bf2146;
+}
+
+@media screen and (min-width: 768px) {
+
+    #poemlist th,
+    #poemlist td {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/**********pagination************/
+
+#pagination {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+#pagination .paginator {
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    height: 40px;
+}
+
+#pagination a {
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    padding: 12px;
+    display: inline-block;
+}
+
+#pagination a:not(.paginator-next) {
+    border-right: 1px solid #ddd;
+}
+
+#pagination a:hover {
+    background-color: #e9ecef;
+    color: #01a9ac;
+}
+
+
+.paginator-current {
+    background-color: #01a9ac !important;
+    border-color: #01a9ac !important;
+    color: #fff !important;
+}
+
+/*********** Add poem page ***********/
+.wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-group {
+    width: 100% !important;
+    text-align: right !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+}
+
+.form-control {
+    display: inline-block;
+    width: 75%;
+    text-align: right;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 14px;
+    color: #424242;
+    font-family: IRANSans;
+    border: 1px solid #dad7d7;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    outline: none;
+    border: 1px solid #212841;
+}
+
+.form-group label {
+    color: #757575;
+    font-size: 14px;
+}
+
+input[name="title"] {
+    height: 50px;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    resize: none;
+    min-height: 240px;
+}
+
+.select-img {
+    text-align: right;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.select-img h5 {
+    font-size: 14px;
+    color: #757575;
+    font-weight: normal;
+    margin-left: 0 !important;
+}
+
+.poem-image {
+    width: 130px;
+    height: 130px;
+    border: 1px #dad7d7 solid;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 11.9vw;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: 11.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.poem-image img,
+.poem-image a {
+    display: inline-block;
+}
+
+.poem-image img {
+    transform: scale(1);
+    transition: all 0.3s linear;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #aaa9a962;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.mask a {
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 5px;
+    transform: scale(10);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.mask a:first-child {
+    border: 1px solid #404e67;
+    color: #000;
+    width: 100px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.mask a:first-child:hover {
+    color: #f9f9f9;
+    background-color: #404e67;
+}
+
+.mask a:nth-child(2) {
+    background-color: rgb(230, 0, 0);
+    text-align: center;
+}
+
+.poem-image:hover {
+    border: 1px solid #212841;
+}
+
+.poem-image:hover img {
+    transform: scale(1.1);
+}
+
+.poem-image:hover .mask {
+    opacity: 1;
+}
+
+.poem-image:hover .mask a {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-contetnt {
+    padding: 14px;
+    display: flex;
+    min-height: 400px;
+}
+
+.modal-footer {
+    padding: 14px;
+    border-top: 1px solid #bbc0c4;
+    display: flex;
+}
+
+.modal-footer button {
+    display: inline-block;
+    background-color: #0ac282;
+    font-family: IRANSans;
+    padding: 10px 19px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    width: 90px;
+    cursor: pointer;
+    outline: none;
+}
+
+.modal-footer button:hover {
+    background-color: #0df3a3;
+    border-color: #0df3a3;
+}
+
+.tag {
+    margin: 20px auto;
+}
+
+.single-select,
+.poems-list,
+.tag {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.single-select h5,
+.poems-list h5,
+.tag h5 {
+    white-space: nowrap;
+    flex: 1;
+    flex-basis: 113px;
+}
+
+.publish-state h5,
+.poems-list h5,
+.single-select h5,
+.tag h5 {
+    font-size: 14px;
+    color: #757575;
+    font-weight: normal;
+    margin-left: 11.3vw;
+}
+
+.publish-state {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.publish-state label {
+    display: inline-block;
+    border: 2px #d81b60 solid;
+    height: 28px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #d81b60;
+}
+
+.publish-state input[type="radio"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.publish-state label:first-of-type {
+    margin-right: -8px;
+    border-radius: 4px 0 0 4px;
+    width: 70px;
+}
+
+.publish-state label:nth-of-type(2) {
+    border-radius: 0 4px 4px 0;
+    width: 85px;
+}
+
+input[type="radio"]:checked+label {
+    color: #fff;
+    background-color: #d81b60;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 6px !important;
+}
+
+/***************** Custom select tag *********************/
+.select2-dropdown {
+    background-color: #f5f5f5 !important;
+    color: #424242 !important;
+    font-size: 14px;
+    font-family: IRANSans !important;
+    text-align: right;
+}
+
+/*option*/
+
+.select2-results__option {
+    font-size: 13px !important;
+    color: #504e4e !important;
+}
+
+.select2-results__option:hover {
+    background-color: #34737d !important;
+    color: #fff !important;
+}
+
+/*selected options*/
+.select2-container--classic .select2-selection--multiple .select2-selection__choice,
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background: #d81b60 !important;
+    border-color: #d81b60 !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    font-family: IRANSans !important;
+    padding: 3px !important;
+    float: right !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: -1px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #333 !important;
+}
+
+/*select box*/
+.select2-container--default.select2-container .select2-selection--multiple {
+    height: 40px !important;
+    padding: 22px !important;
+    border-color: #dad7d7 !important;
+    background-color: #f9f9f9 !important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid #212841 !important;
+}
+
+/* single select*/
+
+.select2-container--default.select2-container .select2-selection {
+    padding: 22px !important;
+    background-color: #f9f9f9 !important;
+    font-family: IRANSans !important;
+    padding-right: 10px !important;
+    font-size: 14px !important;
+    border-color: #dad7d7;
+    width: 100% !important;
+    height: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end;
+    margin-top: -4px !important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection {
+    border: 1px solid #212841 !important;
+    outline: none !important;
+}
+
+[type="search"] {
+    outline: none !important;
+    -webkit-appearance: none;
+}
+
+/*************** calender ****************/
+
+.calender {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.release-date {
+    display: flex;
+    align-items: center;
+}
+
+.release-date h5 {
+    margin-left: 11vw;
+}
+
+.expiration-date {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.expiration-date h5 {
+    margin-left: 25px;
+}
+
+.calender h5 {
+    font-size: 14px;
+    color: #757575;
+    font-weight: normal;
+}
+
+.calender input {
+    display: inline-block;
+    border: 1px solid #dad7d7;
+    color: #757575;
+    height: 60px;
+    width: 220px;
+    border-radius: 3px;
+    padding: 0 10px;
+    text-align: right;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.calender input:focus {
+    border: 1px solid #212841;
+    outline: none;
+}
+
+.bd-table-days button {
+    font-family: IRANSans !important;
+    font-size: 11px !important;
+}
+
+.bd-today {
+    background-color: #0ac282 !important;
+    color: #fff !important;
+}
+
+.btn-box {
+    display: inline-flex;
+    margin-top: 70px;
+}
+
+.btn-box .btn {
+    display: inline-block;
+    font-family: IRANSans;
+    width: 80px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-box .add {
+    background-color: #0ac282;
+    color: #fff;
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-box .add:hover {
+    background-color: #0dad75;
+}
+
+.btn-box .cancel {
+    background-color: #fff;
+    color: #fe5d70;
+    border: 1px solid;
+    transition: all 0.4s;
+}
+
+.btn-box .cancel:hover {
+    background-color: #fe5d70;
+    color: #fff;
+}
+
+/*************** Modal ***************/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(62, 66, 68, 0.5);
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: IRANSans;
+    display: none;
+    overflow: hidden;
+}
+
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    width: 60vw;
+    animation: modal 0.3s ease-out;
+}
+
+@keyframes modal {
+    from {
+        margin-top: -40px;
+    }
+
+    to {
+        margin-top: 0;
+    }
+}
+
+.active-modal .modal-dialog {
+    margin-top: 0;
+}
+
+.modal-dialog .modal-header {
+    border-bottom: 1px solid #bbc0c4;
+    min-height: 60px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-header .close {
+    margin-left: auto;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/******** Responsive Design *********/
+
+@media screen and (max-width: 575.98px) {
+    nav {
+        width: 100vw;
+        background-color: #fff;
+    }
+
+    nav ul li {
+        margin-right: 10px !important;
+        padding-left: 5px;
+    }
+
+    section aside {
+        height: calc(100vh - 50px);
+        width: 57vw;
+    }
+
+    .main-content {
+        width: 100vw !important;
+    }
+
+    .main-content .row .card {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+    .main-content {
+        width: 100vw !important;
+    }
+
+    section aside {
+        width: 40vw;
+    }
+
+    .main-content .row .card {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    section aside {
+        right: -100%;
+        transition: 0.25s;
+    }
+
+    aside.nav-active {
+        right: 0;
+    }
+
+    header .nav-btn {
+        display: block;
+    }
+
+    nav ul li {
+        margin-right: 35px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    aside {
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    /*.publish-state h5,
+    .poems-list h5,
+    .single-select h5,
+    .tag h5 {
+        font-size: 14px;
+        color: #757575;
+        font-weight: normal;
+        margin-left: 11.3vw;
+    }*/
+
+    input[name="title"],
+    textarea[name="poemText"] {
+        width: 78%;
+    }
+}
+
+@media screen and (min-width: 1349.98px) and (max-width: 1545px) {
+
+    .publish-state h5,
+    .poems-list h5,
+    .single-select h5,
+    .tag h5 {
+        margin-left: 10vw;
+    }
+
+    .poem-image {
+        margin-right: 10vw;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+
+    input[name="title"],
+    textarea[name="poemText"] {
+        width: 78.7%;
+    }
+}
+
+@media screen and (min-width: 991.98px) and (max-width: 1170px) {
+
+    .publish-state h5,
+    .poems-list h5,
+    .single-select h5,
+    .tag h5 {
+        margin-left: 9vw;
+    }
+
+    .poem-image {
+        margin-right: 9.4vw;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 991.98px) {
+
+    input[name="title"],
+    textarea[name="poemText"] {
+        width: 77.3%;
+    }
+
+    .release-date h5 {
+        margin-left: 12.5vw;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .calender {
+        justify-content: center;
+    }
+
+    .release-date {
+        margin-right: 100px;
+        margin-left: 40px;
+    }
+
+    .release-date h5 {
+        display: none;
+    }
+
+    .expiration-date {
+        margin-left: 0;
+    }
+
+    .expiration-date h5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .release-date {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    section .main-content {
+        padding: 0;
+    }
+
+    .tabcontent {
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+
+    .calender {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .expiration-date {
+        order: 2;
+        margin: auto;
+    }
+
+    .release-date {
+        margin: auto;
+        order: 1;
+    }
+
+    .calender input {
+        height: 80px;
+        width: 75vw;
+        margin: 10px auto;
+        border-radius: 3px;
+        padding: 0 10px;
+    }
+
+    /* .bd-calendar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw !important;
+        height: 100vh;
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bd-title {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw !important;
+    }
+
+    .bd-title button {
+        padding: 0 39px;
+    } */
+
+    .publish-state h5,
+    .poems-list h5,
+    .single-select h5,
+    .tag h5 {
+        margin-left: 4vw;
+    }
+
+    /******** for width calender*****/
+    .bd-calendar {
+        width: 300px !important;
+    }
+
+    .bd-empty-cell {
+        width: 42px !important;
+        height: 45px !important;
+    }
+
+    .bd-table-days button {
+        width: 42px !important;
+        height: 45px !important;
+        font-family: IRANSans !important;
+        font-size: 8px !important;
+    }
+}

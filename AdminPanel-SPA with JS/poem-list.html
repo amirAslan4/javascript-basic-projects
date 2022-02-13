@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>صفحه اصلی</title>
+    <link rel="stylesheet" href="css/stylePanel.css" />
+    <link rel="stylesheet" href="icon/font/flaticon.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" data-turbolinks="false">
+                            <i class="flaticon-settings"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-turbolinks="false">
+                            <div class="admin-pic"></div>
+                            مدیر سیستم
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-turbolinks="false">
+                            <i class="flaticon-envelope"></i>
+                            <span>5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-turbolinks="false">
+                            <i class="flaticon-notification"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-btn" id="navBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="main-content" id="myContent">
+                <!-- tabContent -->
+                <div class="tabcontent active">
+                    <form>
+                        <input type="text" name="search-poem" id="search-poem" placeholder="جستجو">
+                        <span class="flaticon-search"></span>
+                    </form>
+                    <table id="poemlist">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <i class="flaticon-settings-1"></i>
+                                </th>
+                                <th>وضعیت انتشار</th 2px blue solid;">
+                                <!--<th>تاریخ انقضا</th>
+                                <th>تاریخ انتشار</th>-->
+                                <th>عنوان کتاب</th>
+                                <th>نام شاعر</th>
+                                <th>عنوان</th>
+                                <th>عکس شعر </th>
+                            </tr>
+                        </thead>
+                        <tbody class="poem-list">
+
+                        </tbody>
+                    </table>
+                    <!-- Pagination -->
+                    <div id="pagination">
+
+                    </div>
+                </div>
+            </div>
+            <aside id="menu">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#" data-turbolinks="false" class="collapsible">
+                            <span class="flaticon-up-arrow"></span>
+                            <span>اشعار</span>
+                            <span class="flaticon-file"></span>
+                        </a>
+                        <div class="content">
+                            <ul class="subMenu">
+                                <li>
+                                    <a href="/poem-list.html" data-turbolinks-action="replace" class="tablinks active">
+                                        لیست اشعار
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/add-poem.html" class="tablinks" data-turbolinks="false">
+                                        افزودن شعر
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="collapsible" data-turbolinks="false">
+                            <span class="flaticon-up-arrow"></span>
+                            <span>مدیریت سامانه</span>
+                            <span class="flaticon-settings-1"></span>
+                        </a>
+                        <div class="content">
+                            <ul class="subMenu">
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        مدیریت کاربران
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        مدیریت فایل
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        تنظیمات کلی سایت
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        آمار سایت
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        لیست کاربران
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="collapsible" data-turbolinks="false">
+                            <span class="flaticon-up-arrow"></span>
+                            <span>صفحه ها</span>
+                            <span class="flaticon-file"></span>
+                        </a>
+                        <div class="content">
+                            <ul class="subMenu">
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        404
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        ورود
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tablinks" data-turbolinks="false">
+                                        عضویت
+                                        <span class="flaticon-chevron"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="item4 tablinks" class="tablinks" data-turbolinks="false">
+                            <span>آلبوم تصاویر</span>
+                            <span class="flaticon-gallery"></span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--<script src="js/pagination.full.min.js"></script>-->
+    <script src="./js/pagination.s.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="js/index.js"></script>
+    <script src="js/poemList.js"></script>
+
+</body>
+
+</html>
